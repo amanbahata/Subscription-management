@@ -25,7 +25,16 @@ public class NewspaperSubscription extends Subscription implements HasAddress, B
         this.address = address;
     }
 
+    @Override
+    public int computeTotalChargeInPence() {
+        return super.getStandingChargeInPence();
+    }
+
     public String getAddress(){
         return this.address;
+    }
+
+    public int getMaxChargeInPence(){
+        return computeTotalChargeInPence();
     }
 }
