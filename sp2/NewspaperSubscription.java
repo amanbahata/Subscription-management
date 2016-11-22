@@ -7,7 +7,7 @@ package sp2;
  */
 public class NewspaperSubscription extends Subscription implements HasAddress, BoundedCharge {
 
-    // TO DO
+    private String address;
 
     /**
      * Constructs a new NewspaperSubscription based on the parameters.
@@ -20,10 +20,11 @@ public class NewspaperSubscription extends Subscription implements HasAddress, B
      * @param address the address to which the newspaper is delivered;
      *  must not be null
      */
-    public NewspaperSubscription(String subscriber, String newspaper,
-            int standingChargeInPence, String address) {
-        // TO DO
+    public NewspaperSubscription(String subscriber, String newspaper, int standingChargeInPence, String address) {
+        this.address = address;
     }
 
-    // TO DO
+    public String getAddress(){
+        return this.address;
+    }
 }
