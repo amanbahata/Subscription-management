@@ -38,7 +38,7 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
 
     @Override
     public int computeTotalChargeInPence(){
-        return getStandingChargeInPence() + calculateMinutesAirbag() + calculateTextAirbag();
+        return getStandingChargeInPence() + calculateMinutesAirbag() * getCharge() + calculateTextAirbag() * getChargePerText();
     }
 
     public int calculateMinutesAirbag(){
