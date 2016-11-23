@@ -153,7 +153,7 @@ public class SubscriptionMain {
     public static void runBoundedCharge() {
         BoundedCharge[] boundedCharges = {
             mkNewspaper1(),
-//            mkPowerUser(),
+            mkPowerUser(),
             mkNewspaper2()
         };
         for (BoundedCharge bounded : boundedCharges) {
@@ -172,8 +172,8 @@ public class SubscriptionMain {
         runNewspapers();
         runLandline();
         runPayWhatYouUse();
-//        runPowerUser();
-        runHasAddress();
-        runBoundedCharge();
+        runPowerUser();
+//        runHasAddress();
+//        runBoundedCharge();
     }
 }
