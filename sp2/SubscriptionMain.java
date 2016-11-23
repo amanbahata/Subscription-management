@@ -61,9 +61,9 @@ public class SubscriptionMain {
     /**
      * @return an exemplary PowerUserMobileSubscription subscription
      */
-//    public static PowerUserMobileSubscription mkPowerUser() {
-//        return new PowerUserMobileSubscription("Kim Doe", "07700900003");
-//    }
+    public static PowerUserMobileSubscription mkPowerUser() {
+        return new PowerUserMobileSubscription("Kim Doe", "07700900003");
+    }
 
 
     /* Methods that exercise objects in (and related to) the Subscription
@@ -115,23 +115,23 @@ public class SubscriptionMain {
         payWhatYouUse.endPeriod();
     }
 
-//    /**
-//     * Exercises some of the functionality of a PowerUserMobileSubscription.
-//     */
-//    public static void runPowerUser() {
-//        PowerUserMobileSubscription payWhatYouUse = mkPowerUser();
-//        payWhatYouUse.sendTextMessages(MESSAGES2);
-//        payWhatYouUse.makeCall(MINUTES2);
-//        payWhatYouUse.sendTextMessages(MESSAGES1);
-//        payWhatYouUse.makeCall(MINUTES1);
-//        payWhatYouUse.endPeriod();
-//
-//        payWhatYouUse.sendTextMessages(MESSAGES1);
-//        payWhatYouUse.sendTextMessages(MESSAGES2);
-//        payWhatYouUse.makeCall(MINUTES1);
-//        payWhatYouUse.makeCall(MINUTES2);
-//        payWhatYouUse.endPeriod();
-//    }
+    /**
+     * Exercises some of the functionality of a PowerUserMobileSubscription.
+     */
+    public static void runPowerUser() {
+        PowerUserMobileSubscription payWhatYouUse = mkPowerUser();
+        payWhatYouUse.sendTextMessages(MESSAGES2);
+        payWhatYouUse.makeCall(MINUTES2);
+        payWhatYouUse.sendTextMessages(MESSAGES1);
+        payWhatYouUse.makeCall(MINUTES1);
+        payWhatYouUse.endPeriod();
+
+        payWhatYouUse.sendTextMessages(MESSAGES1);
+        payWhatYouUse.sendTextMessages(MESSAGES2);
+        payWhatYouUse.makeCall(MINUTES1);
+        payWhatYouUse.makeCall(MINUTES2);
+        payWhatYouUse.endPeriod();
+    }
 
     /**
      * Exercises some of the functionality of HasAddress objects.

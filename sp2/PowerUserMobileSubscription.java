@@ -12,6 +12,8 @@ package sp2;
 public class PowerUserMobileSubscription extends MobileSubscription implements BoundedCharge {
 
     // TO DO
+    private int costAirBagMinutes = 1800;
+    private int costAirBagText = 900;
 
     /**
      * Constructs a new PowerUserMobileSubscription according to the
@@ -22,8 +24,18 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
      *  must not be null
      */
     public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
-        // TO DO
+        super(subscriber,"Power user mobile subscription "+phoneNumber,phoneNumber,4000);
     }
 
-     TO DO
+     // TO DO
+
+    public int getMaxChargeInPence(){
+        return getStandingChargeInPence();
+    }
+
+    @Override
+    public int computeTotalChargeInPence(){
+        return 0;
+    }
+
 }

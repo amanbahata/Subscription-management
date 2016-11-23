@@ -11,7 +11,6 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
     // TO DO
 
     private String address;
-    private final int CHARGE_PER_MINUTE = 2;
 
     /**
      * Constructs a new LandlineSubscription according to the parameters.
@@ -22,16 +21,15 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
      */
     public LandlineSubscription(String subscriber, String phoneNumber, String address) {
         super(subscriber,"Landline telephone "+phoneNumber, phoneNumber, 1800);
-
-
         this.address = address;
+        setCharge(2);
     }
 
     // TO DO
 
     @Override
     public int computeTotalChargeInPence(){
-        return super.getStandingChargeInPence() + CHARGE_PER_MINUTE * getCallMinutes();
+        return super.getStandingChargeInPence() + getCharge() * getCallMinutes();
     }
 
     public String getAddress(){

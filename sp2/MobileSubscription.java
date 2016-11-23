@@ -7,7 +7,7 @@ package sp2;
  */
 public abstract class MobileSubscription extends PhoneSubscription {
 
-    // TO DO
+    private  int chargePerText;
 
     private int numberOfText;
 
@@ -33,6 +33,15 @@ public abstract class MobileSubscription extends PhoneSubscription {
     public void resetConsumption() {
         resetNumberOfText();
         resetCallMinutes();
+    }
+
+
+    public int getChargePerText(){
+        return chargePerText;
+    }
+
+    public void setChargePerText(int chargePerText){
+        this.chargePerText = chargePerText;
     }
 
 

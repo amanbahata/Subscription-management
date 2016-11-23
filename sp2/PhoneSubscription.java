@@ -7,6 +7,7 @@ package sp2;
  */
 public abstract class PhoneSubscription extends Subscription {
 
+    private  int chargePerMinute;
     private String phoneNumber;
     private int callMinutes;
 
@@ -30,6 +31,14 @@ public abstract class PhoneSubscription extends Subscription {
 
     public void resetCallMinutes(){
         this.callMinutes = 0;
+    }
+
+    public void setCharge(int charge){
+        chargePerMinute = charge;
+    }
+
+    public int getCharge(){
+        return chargePerMinute;
     }
 }
 
