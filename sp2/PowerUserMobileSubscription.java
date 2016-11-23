@@ -9,21 +9,21 @@ package sp2;
  *
  * @author  Aman Enghida
  */
-//public class PowerUserMobileSubscription extends MobileSubscription implements BoundedCharge {
-//
-//    // TO DO
-//
-//    /**
-//     * Constructs a new PowerUserMobileSubscription according to the
-//     * given parameters.
-//     *
-//     * @param subscriber the name of the subscriber; must not be null
-//     * @param phoneNumber the phone number used for this subscription;
-//     *  must not be null
-//     */
-//    public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
-//        // TO DO
-//    }
+public class PowerUserMobileSubscription extends MobileSubscription implements BoundedCharge {
 
     // TO DO
-//}
+
+    /**
+     * Constructs a new PowerUserMobileSubscription according to the
+     * given parameters.
+     *
+     * @param subscriber the name of the subscriber; must not be null
+     * @param phoneNumber the phone number used for this subscription;
+     *  must not be null
+     */
+    public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
+        // TO DO
+    }
+
+     TO DO
+}

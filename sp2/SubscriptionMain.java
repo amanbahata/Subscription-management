@@ -51,12 +51,12 @@ public class SubscriptionMain {
             "43 Gordon Square");
     }
 
-//    /**
-//     * @return an exemplary PayWhatYouUseMobileSubscription subscription
-//     */
-//    public static PayWhatYouUseMobileSubscription mkPayWhatYouUse() {
-//        return new PayWhatYouUseMobileSubscription("John Doe", "07700900002");
-//    }
+    /**
+     * @return an exemplary PayWhatYouUseMobileSubscription subscription
+     */
+    public static PayWhatYouUseMobileSubscription mkPayWhatYouUse() {
+        return new PayWhatYouUseMobileSubscription("John Doe", "07700900002");
+    }
 
     /**
      * @return an exemplary PowerUserMobileSubscription subscription
@@ -97,23 +97,23 @@ public class SubscriptionMain {
         landline.endPeriod();
     }
 
-//    /**
-//     * Exercises some of the functionality of a PayWhatYouUseMobileSubscription.
-//     */
-//    public static void runPayWhatYouUse() {
-//        PayWhatYouUseMobileSubscription payWhatYouUse = mkPayWhatYouUse();
-//        payWhatYouUse.makeCall(MINUTES1);
-//        payWhatYouUse.sendTextMessages(MESSAGES1);
-//        payWhatYouUse.makeCall(MINUTES2);
-//        payWhatYouUse.sendTextMessages(MESSAGES2);
-//        payWhatYouUse.endPeriod();
-//
-//        payWhatYouUse.sendTextMessages(MESSAGES1);
-//        payWhatYouUse.makeCall(MINUTES2);
-//        payWhatYouUse.sendTextMessages(MESSAGES2);
-//        payWhatYouUse.makeCall(MINUTES1);
-//        payWhatYouUse.endPeriod();
-//    }
+    /**
+     * Exercises some of the functionality of a PayWhatYouUseMobileSubscription.
+     */
+    public static void runPayWhatYouUse() {
+        PayWhatYouUseMobileSubscription payWhatYouUse = mkPayWhatYouUse();
+        payWhatYouUse.makeCall(MINUTES1);
+        payWhatYouUse.sendTextMessages(MESSAGES1);
+        payWhatYouUse.makeCall(MINUTES2);
+        payWhatYouUse.sendTextMessages(MESSAGES2);
+        payWhatYouUse.endPeriod();
+
+        payWhatYouUse.sendTextMessages(MESSAGES1);
+        payWhatYouUse.makeCall(MINUTES2);
+        payWhatYouUse.sendTextMessages(MESSAGES2);
+        payWhatYouUse.makeCall(MINUTES1);
+        payWhatYouUse.endPeriod();
+    }
 
 //    /**
 //     * Exercises some of the functionality of a PowerUserMobileSubscription.
@@ -139,7 +139,7 @@ public class SubscriptionMain {
     public static void runHasAddress() {
         HasAddress[] hasAddresses = {
             mkNewspaper1(),
-//            mkLandline(),
+            mkLandline(),
             mkNewspaper2()
         };
         for (HasAddress hasAddress : hasAddresses) {
@@ -171,7 +171,7 @@ public class SubscriptionMain {
     public static void main(String[] args) {
         runNewspapers();
         runLandline();
-//        runPayWhatYouUse();
+        runPayWhatYouUse();
 //        runPowerUser();
         runHasAddress();
         runBoundedCharge();

@@ -25,5 +25,15 @@ public abstract class MobileSubscription extends PhoneSubscription {
         return numberOfText;
     }
 
+    public void resetNumberOfText(){
+        this.numberOfText = 0;
+    }
+
+    @Override
+    public void resetConsumption() {
+        resetNumberOfText();
+        resetCallMinutes();
+    }
+
 
 }

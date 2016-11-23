@@ -38,14 +38,9 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
         return this.address;
     }
 
-//    public int getCallMinutes(){
-//        return super.getCallMinutes();
-//    }
-
-    public void makeCall(int minutes){
-        if (minutes <= 0) {throw new IllegalArgumentException("Illegal negative argument for minutes");}
-        setCallMinutes(minutes);
+    @Override
+    public void resetConsumption() {
+        resetCallMinutes();
     }
-
 
 }

@@ -10,23 +10,27 @@ public abstract class PhoneSubscription extends Subscription {
     private String phoneNumber;
     private int callMinutes;
 
-    public PhoneSubscription(String subscriber,String subscriptionName, String phoneNumber, int standingChargeInPence){
+    public PhoneSubscription(String subscriber, String subscriptionName, String phoneNumber, int standingChargeInPence) {
         super(subscriber, subscriptionName, standingChargeInPence);
         this.phoneNumber = phoneNumber;
     }
 
 
-
-    public String getPhoneNumber(){
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setCallMinutes(int minutes){
+    public void makeCall(int minutes) {
         callMinutes += minutes;
     }
 
-    public int getCallMinutes(){
+    public int getCallMinutes() {
         return this.callMinutes;
     }
 
+    public void resetCallMinutes(){
+        this.callMinutes = 0;
+    }
 }
+
+
