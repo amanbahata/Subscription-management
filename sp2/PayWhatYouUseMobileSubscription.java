@@ -8,7 +8,8 @@ package sp2;
  */
 public class PayWhatYouUseMobileSubscription extends MobileSubscription {
 
-    // TO DO
+    private final int MOBILE_CHARGE_PER_MINUTE_IN_PENCE = 40;
+    private final int MOBILE_CHARGE_PER_TEXT_IN_PENCE = 20;
 
     /**
      * Constructs a new PayWhatYouUseMobileSubscription according to the
@@ -18,8 +19,14 @@ public class PayWhatYouUseMobileSubscription extends MobileSubscription {
      * @param phoneNumber the phone number; must not be null
      */
     public PayWhatYouUseMobileSubscription(String subscriber, String phoneNumber) {
-        super(subscriber,phoneNumber);
+        super(subscriber,"Pay what you use mobile subscription "+phoneNumber,phoneNumber,0);
     }
 
-    // TO DO
+    @Override
+    public int computeTotalChargeInPence(){
+        int totalMinutesCharge = MOBILE_CHARGE_PER_MINUTE_IN_PENCE * getCallMinutes();
+        int totalTextCharge = MOBILE_CHARGE_PER_TEXT_IN_PENCE * getTextMessages();
+        return totalMinutesCharge + totalTextCharge;
+    }
+
 }

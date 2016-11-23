@@ -9,6 +9,21 @@ public abstract class MobileSubscription extends PhoneSubscription {
 
     // TO DO
 
-    public MobileSubscription(String subscription, String phoneNumber)
+    private int numberOfText;
+
+
+    public MobileSubscription(String subscriber,String subscriptionName, String phoneNumber, int standingChargeInPence){
+        super(subscriber, subscriptionName, phoneNumber, standingChargeInPence);
+    }
+
+
+    public void sendTextMessages(int number){
+        numberOfText += number;
+    }
+
+    public int getTextMessages(){
+        return numberOfText;
+    }
+
 
 }

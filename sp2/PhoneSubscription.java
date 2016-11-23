@@ -22,7 +22,7 @@ public abstract class PhoneSubscription extends Subscription {
     }
 
     public void setCallMinutes(int minutes){
-        this.callMinutes = minutes;
+        callMinutes += minutes;
     }
 
     public int getCallMinutes(){
