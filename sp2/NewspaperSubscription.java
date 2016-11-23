@@ -3,10 +3,9 @@ package sp2;
 /**
  * A subscription to a newspaper or a magazine. 
  * 
- * @author 
+ * @author Aman Enghida
  */
 public class NewspaperSubscription extends Subscription implements HasAddress, BoundedCharge {
-
     private String address;
 
     /**

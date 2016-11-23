@@ -4,7 +4,7 @@ package sp2;
  * Mobile phone subscription with zero standing charge, but high
  * costs for used services.
  *
- * @author 
+ * @author Aman Enghida
  */
 public class PayWhatYouUseMobileSubscription extends MobileSubscription {
 
@@ -18,7 +18,7 @@ public class PayWhatYouUseMobileSubscription extends MobileSubscription {
      * @param phoneNumber the phone number; must not be null
      */
     public PayWhatYouUseMobileSubscription(String subscriber, String phoneNumber) {
-        // TO DO
+        super(subscriber,phoneNumber);
     }
 
     // TO DO
