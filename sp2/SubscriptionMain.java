@@ -173,7 +173,7 @@ public class SubscriptionMain {
         runLandline();
         runPayWhatYouUse();
         runPowerUser();
-//        runHasAddress();
-//        runBoundedCharge();
+        runHasAddress();
+        runBoundedCharge();
     }
 }

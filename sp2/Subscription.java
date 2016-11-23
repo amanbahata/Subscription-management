@@ -31,8 +31,7 @@ public abstract class Subscription {
      * @param standingChargeInPence the standing charge per billing period,
      *  expressed in pence; must not be negative
      */
-    public Subscription(String subscriber, String subscriptionName,
-            int standingChargeInPence) {
+    public Subscription(String subscriber, String subscriptionName, int standingChargeInPence) {
         if (subscriber == null) {
             throw new IllegalArgumentException("Illegal null argument for subscriber.");
         }
