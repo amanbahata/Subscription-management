@@ -32,6 +32,9 @@ public abstract class PhoneSubscription extends Subscription {
      */
     public PhoneSubscription(String subscriber, String subscriptionName, String phoneNumber, int standingChargeInPence) {
         super(subscriber, subscriptionName, standingChargeInPence);
+        if (phoneNumber == null) {
+            throw new IllegalArgumentException("Illegal null argument for phone number.");
+        }
         this.phoneNumber = phoneNumber;
     }
 
