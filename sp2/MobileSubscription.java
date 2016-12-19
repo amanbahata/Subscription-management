@@ -35,7 +35,9 @@ public abstract class MobileSubscription extends PhoneSubscription {
      * @param number of messages.
      */
     public void sendTextMessages(int number) {
-        if (number <= 0){throw new IllegalArgumentException("Illegal negative or 0 argument for number of texts sent.");}
+        if (number <= 0) {
+            throw new IllegalArgumentException("Illegal negative or 0 argument for number of texts sent.");
+        }
         numberOfText += number;
     }
 

@@ -22,11 +22,11 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
      */
     public LandlineSubscription(String subscriber, String phoneNumber, String address) {
         super(subscriber, "Landline telephone " + phoneNumber, phoneNumber, 1800);
-        if (address == null ){
+        if (address == null) {
             throw new IllegalArgumentException("Illegal null argument for address.");
         }
         this.address = address;
-        setChargePerMinute(2);
+        setChargePerMinute(2);    // Sets the landline subscription to s pence per minute
     }
 
     @Override

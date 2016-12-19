@@ -18,8 +18,8 @@ public class PayWhatYouUseMobileSubscription extends MobileSubscription {
      */
     public PayWhatYouUseMobileSubscription(String subscriber, String phoneNumber) {
         super(subscriber, "Pay what you use mobile subscription " + phoneNumber, phoneNumber, 0);
-        setChargePerMinute(40);
-        setChargePerText(20);
+        setChargePerMinute(40);   // it sets the charge per minute for the subscription
+        setChargePerText(20);     // it sets the charge per text for the subscription
     }
 
     @Override

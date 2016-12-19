@@ -25,7 +25,7 @@ public class NewspaperSubscription extends Subscription implements HasAddress, B
      */
     public NewspaperSubscription(String subscriber, String newspaper, int standingChargeInPence, String address) {
         super(subscriber, newspaper, standingChargeInPence);
-        if (address == null){
+        if (address == null) {
             throw new IllegalArgumentException("Illegal null argument for address.");
         }
         this.address = address;
