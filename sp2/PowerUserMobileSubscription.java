@@ -11,8 +11,14 @@ package sp2;
  */
 public class PowerUserMobileSubscription extends MobileSubscription implements BoundedCharge {
 
-    // TO DO
+    /**
+     * The upper bound of the call minutes charged in a single billing period
+     */
     private int costAirBagMinutes = 1800;
+
+    /**
+     * The upper bound of the number of text charged in a single billing period
+     */
     private int costAirBagText = 900;
 
     /**

@@ -6,6 +6,10 @@ package sp2;
  * @author Aman Enghida
  */
 public class NewspaperSubscription extends Subscription implements HasAddress, BoundedCharge {
+
+    /**
+     * the address the newspaper is delivered to.
+     */
     private String address;
 
     /**

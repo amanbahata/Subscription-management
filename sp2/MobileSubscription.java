@@ -7,9 +7,14 @@ package sp2;
  */
 public abstract class MobileSubscription extends PhoneSubscription {
 
-
+    /**
+     * charge per single text
+     */
     private int chargePerText;
 
+    /**
+     * Number of text sent from the subscription
+     */
     private int numberOfText;
 
 
