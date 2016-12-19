@@ -31,19 +31,19 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
     public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
         super(subscriber, "Mobile power user " + phoneNumber, phoneNumber, 4000);
         setChargePerText(8);
-        setCharge(10);
+        setChargePerMinute(10);
     }
 
 
 
     public int getMaxChargeInPence() {
-        return getStandingChargeInPence() + getChargePerText() * costAirBagText + getCharge() * costAirBagMinutes;
+        return getStandingChargeInPence() + getChargePerText() * costAirBagText + getChargePerMinute() * costAirBagMinutes;
     }
 
 
     @Override
     public int computeTotalChargeInPence() {
-        return getStandingChargeInPence() + calculateMinutesAirbag() * getCharge() + calculateTextAirbag() * getChargePerText();
+        return getStandingChargeInPence() + calculateMinutesAirbag() * getChargePerMinute() + calculateTextAirbag() * getChargePerText();
     }
 
     /**

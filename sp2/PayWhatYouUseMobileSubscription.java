@@ -18,13 +18,13 @@ public class PayWhatYouUseMobileSubscription extends MobileSubscription {
      */
     public PayWhatYouUseMobileSubscription(String subscriber, String phoneNumber) {
         super(subscriber, "Pay what you use mobile subscription " + phoneNumber, phoneNumber, 0);
-        setCharge(40);
+        setChargePerMinute(40);
         setChargePerText(20);
     }
 
     @Override
     public int computeTotalChargeInPence() {
-        int totalMinutesCharge = getCharge() * getCallMinutes();
+        int totalMinutesCharge = getChargePerMinute() * getCallMinutes();
         int totalTextCharge = getChargePerText() * getTextMessages();
         return totalMinutesCharge + totalTextCharge;
     }

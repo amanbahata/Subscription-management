@@ -26,12 +26,12 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
             throw new IllegalArgumentException("Illegal null argument for address.");
         }
         this.address = address;
-        setCharge(2);
+        setChargePerMinute(2);
     }
 
     @Override
     public int computeTotalChargeInPence() {
-        return super.getStandingChargeInPence() + getCharge() * getCallMinutes();
+        return super.getStandingChargeInPence() + getChargePerMinute() * getCallMinutes();
     }
 
     public String getAddress() {

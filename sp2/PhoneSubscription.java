@@ -80,7 +80,7 @@ public abstract class PhoneSubscription extends Subscription {
      *
      * @param charge cost per minute of a call
      */
-    public void setCharge(int charge) {
+    public void setChargePerMinute(int charge) {
         chargePerMinute = charge;
     }
 
@@ -90,7 +90,7 @@ public abstract class PhoneSubscription extends Subscription {
      *
      * @return charge per minute
      */
-    public int getCharge() {
+    public int getChargePerMinute() {
         return chargePerMinute;
     }
 }
