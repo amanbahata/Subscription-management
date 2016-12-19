@@ -26,10 +26,6 @@ public class LandlineSubscription extends PhoneSubscription implements HasAddres
         setCharge(2);
     }
 
-    /**
-     * Computes the total charge in pence of the subscription
-     * @return
-     */
     @Override
     public int computeTotalChargeInPence() {
         return super.getStandingChargeInPence() + getCharge() * getCallMinutes();

@@ -26,8 +26,7 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
      * given parameters.
      *
      * @param subscriber  the name of the subscriber; must not be null
-     * @param phoneNumber the phone number used for this subscription;
-     *                    must not be null
+     * @param phoneNumber the phone number used for this subscription; must not be null
      */
     public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
         super(subscriber, "Mobile power user " + phoneNumber, phoneNumber, 4000);
@@ -35,7 +34,7 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
         setCharge(10);
     }
 
-    // TO DO
+
 
     public int getMaxChargeInPence() {
         return getStandingChargeInPence() + getChargePerText() * costAirBagText + getCharge() * costAirBagMinutes;
@@ -47,6 +46,10 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
         return getStandingChargeInPence() + calculateMinutesAirbag() * getCharge() + calculateTextAirbag() * getChargePerText();
     }
 
+    /**
+     *
+     * @return
+     */
     public int calculateMinutesAirbag() {
         int minutes = getCallMinutes();
         if (minutes <= costAirBagMinutes) {
