@@ -51,6 +51,7 @@ public abstract class PhoneSubscription extends Subscription {
      * @param minutes duration of a single call
      */
     public void makeCall(int minutes) {
+        if (minutes <= 0){throw new IllegalArgumentException("Illegal negative or 0 argument for minutes.");}
         callMinutes += minutes;
     }
 
