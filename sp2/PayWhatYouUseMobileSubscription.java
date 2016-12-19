@@ -9,22 +9,21 @@ package sp2;
 public class PayWhatYouUseMobileSubscription extends MobileSubscription {
 
 
-
     /**
      * Constructs a new PayWhatYouUseMobileSubscription according to the
      * parameters.
      *
-     * @param subscriber the name of the subscriber; must not be null
+     * @param subscriber  the name of the subscriber; must not be null
      * @param phoneNumber the phone number; must not be null
      */
     public PayWhatYouUseMobileSubscription(String subscriber, String phoneNumber) {
-        super(subscriber,"Pay what you use mobile subscription "+phoneNumber,phoneNumber,0);
+        super(subscriber, "Pay what you use mobile subscription " + phoneNumber, phoneNumber, 0);
         setCharge(40);
         setChargePerText(20);
     }
 
     @Override
-    public int computeTotalChargeInPence(){
+    public int computeTotalChargeInPence() {
         int totalMinutesCharge = getCharge() * getCallMinutes();
         int totalTextCharge = getChargePerText() * getTextMessages();
         return totalMinutesCharge + totalTextCharge;

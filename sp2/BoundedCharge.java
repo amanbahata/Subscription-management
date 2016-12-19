@@ -14,7 +14,7 @@ public interface BoundedCharge {
      * expressed in pence.
      *
      * @return the maximum charge in pence that may be incurred during a
-     *  billing period
+     * billing period
      */
     int getMaxChargeInPence();
 }

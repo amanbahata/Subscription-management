@@ -7,25 +7,26 @@ package sp2;
  */
 public abstract class MobileSubscription extends PhoneSubscription {
 
-    private  int chargePerText;
+
+    private int chargePerText;
 
     private int numberOfText;
 
 
-    public MobileSubscription(String subscriber,String subscriptionName, String phoneNumber, int standingChargeInPence){
+    public MobileSubscription(String subscriber, String subscriptionName, String phoneNumber, int standingChargeInPence) {
         super(subscriber, subscriptionName, phoneNumber, standingChargeInPence);
     }
 
 
-    public void sendTextMessages(int number){
+    public void sendTextMessages(int number) {
         numberOfText += number;
     }
 
-    public int getTextMessages(){
+    public int getTextMessages() {
         return numberOfText;
     }
 
-    public void resetNumberOfText(){
+    public void resetNumberOfText() {
         this.numberOfText = 0;
     }
 
@@ -36,11 +37,11 @@ public abstract class MobileSubscription extends PhoneSubscription {
     }
 
 
-    public int getChargePerText(){
+    public int getChargePerText() {
         return chargePerText;
     }
 
-    public void setChargePerText(int chargePerText){
+    public void setChargePerText(int chargePerText) {
         this.chargePerText = chargePerText;
     }
 

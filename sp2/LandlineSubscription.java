@@ -1,4 +1,4 @@
-package sp2;    
+package sp2;
 
 /**
  * Represents a phone subscription for landline telephones at a certain
@@ -8,31 +8,34 @@ package sp2;
  */
 public class LandlineSubscription extends PhoneSubscription implements HasAddress {
 
-    // TO DO
-
+    /**
+     * the address the subscription is registered to.
+     */
     private String address;
 
     /**
      * Constructs a new LandlineSubscription according to the parameters.
      *
-     * @param subscriber the name of the subscriber; must not be null
+     * @param subscriber  the name of the subscriber; must not be null
      * @param phoneNumber the phone number; must not be null
-     * @param address the address; must not be null
+     * @param address     the address; must not be null
      */
     public LandlineSubscription(String subscriber, String phoneNumber, String address) {
-        super(subscriber,"Landline telephone "+phoneNumber, phoneNumber, 1800);
+        super(subscriber, "Landline telephone " + phoneNumber, phoneNumber, 1800);
         this.address = address;
         setCharge(2);
     }
 
-    // TO DO
-
+    /**
+     * Computes the total charge in pence of the subscription
+     * @return
+     */
     @Override
-    public int computeTotalChargeInPence(){
+    public int computeTotalChargeInPence() {
         return super.getStandingChargeInPence() + getCharge() * getCallMinutes();
     }
 
-    public String getAddress(){
+    public String getAddress() {
         return this.address;
     }
 

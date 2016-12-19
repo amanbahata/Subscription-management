@@ -11,25 +11,30 @@ package sp2;
  */
 public abstract class Subscription {
 
-    /** The subscriber, for simplicity represented by a String for their name. */
+    /**
+     * The subscriber, for simplicity represented by a String for their name.
+     */
     private String subscriber;
 
-    /** The name of the Subscription (i.e., the service that is subscribed). */
+    /**
+     * The name of the Subscription (i.e., the service that is subscribed).
+     */
     private String subscriptionName;
 
-    /** The standing charge (the "minimum cost" per billing period) of this
-     *  Subscription.
+    /**
+     * The standing charge (the "minimum cost" per billing period) of this
+     * Subscription.
      */
     private int standingChargeInPence;
 
     /**
      * Constructs a new Subscription corresponding to the parameters.
      *
-     * @param subscriber the name of the subscriber; must not be null
-     * @param subscriptionName the name of the subscribed service;
-     *  must not be null
+     * @param subscriber            the name of the subscriber; must not be null
+     * @param subscriptionName      the name of the subscribed service;
+     *                              must not be null
      * @param standingChargeInPence the standing charge per billing period,
-     *  expressed in pence; must not be negative
+     *                              expressed in pence; must not be negative
      */
     public Subscription(String subscriber, String subscriptionName, int standingChargeInPence) {
         if (subscriber == null) {
@@ -52,7 +57,7 @@ public abstract class Subscription {
      * so far.
      *
      * @return the total charge for the services used in this billing period
-     *  so far
+     * so far
      */
     public abstract int computeTotalChargeInPence();
 
@@ -79,7 +84,7 @@ public abstract class Subscription {
      * for which charges have been accumulated so far in this billing period.
      *
      * @return a String representation of the bill, also based on the services
-     *  for which charges have been accumulated so far in this billing period
+     * for which charges have been accumulated so far in this billing period
      */
     public final String generateBill() {
         int totalCharge = computeTotalChargeInPence();
@@ -88,7 +93,7 @@ public abstract class Subscription {
         String result = "Subscriber: " + this.subscriber + "\n"
                 + "Subscription for: " + this.subscriptionName + "\n"
                 + "Total charge for this period: GBP " + pounds + "."
-                + (pence < 10 ? "0" : "") + pence; 
+                + (pence < 10 ? "0" : "") + pence;
         return result;
     }
 
@@ -113,7 +118,7 @@ public abstract class Subscription {
     /**
      * Returns the standing charge (in pence) associated with this
      * Subscription.
-     * 
+     *
      * @return the standingChargeInPence
      */
     public int getStandingChargeInPence() {

@@ -10,16 +10,24 @@ public class SubscriptionMain {
 
     /* Some constants */
 
-    /** Example call duration in minutes. */
+    /**
+     * Example call duration in minutes.
+     */
     private static int MINUTES1 = 10;
 
-    /** (Different) example call duration in minutes. */
+    /**
+     * (Different) example call duration in minutes.
+     */
     private static int MINUTES2 = 10000;
 
-    /** Example number of text messages. */
+    /**
+     * Example number of text messages.
+     */
     private static int MESSAGES1 = 2;
 
-    /** (Different) example number of text messages. */
+    /**
+     * (Different) example number of text messages.
+     */
     private static int MESSAGES2 = 2000;
 
 
@@ -30,7 +38,7 @@ public class SubscriptionMain {
      */
     public static NewspaperSubscription mkNewspaper1() {
         return new NewspaperSubscription("Sherlock Holmes",
-            "The Strand Magazine", 10, "221B Baker Street");
+                "The Strand Magazine", 10, "221B Baker Street");
     }
 
     /**
@@ -38,7 +46,7 @@ public class SubscriptionMain {
      */
     public static NewspaperSubscription mkNewspaper2() {
         return new NewspaperSubscription("George Birkbeck",
-            "The Lamp and Owl", 100, "Malet Street");
+                "The Lamp and Owl", 100, "Malet Street");
     }
 
     /**
@@ -48,7 +56,7 @@ public class SubscriptionMain {
         // The phone numbers are inspired by
         // https://en.wikipedia.org/wiki/Fictitious_telephone_number#United_Kingdom
         return new LandlineSubscription("Jane Doe", "02079460001",
-            "43 Gordon Square");
+                "43 Gordon Square");
     }
 
     /**
@@ -138,9 +146,9 @@ public class SubscriptionMain {
      */
     public static void runHasAddress() {
         HasAddress[] hasAddresses = {
-            mkNewspaper1(),
-            mkLandline(),
-            mkNewspaper2()
+                mkNewspaper1(),
+                mkLandline(),
+                mkNewspaper2()
         };
         for (HasAddress hasAddress : hasAddresses) {
             System.out.println("Address: " + hasAddress.getAddress());
@@ -152,9 +160,9 @@ public class SubscriptionMain {
      */
     public static void runBoundedCharge() {
         BoundedCharge[] boundedCharges = {
-            mkNewspaper1(),
-            mkPowerUser(),
-            mkNewspaper2()
+                mkNewspaper1(),
+                mkPowerUser(),
+                mkNewspaper2()
         };
         for (BoundedCharge bounded : boundedCharges) {
             System.out.println("Max charge in pence: "

@@ -7,7 +7,7 @@ package sp2;
  * billing period: only a bounded number of call minutes and of
  * text messages are charged, everything beyond that is free.
  *
- * @author  Aman Enghida
+ * @author Aman Enghida
  */
 public class PowerUserMobileSubscription extends MobileSubscription implements BoundedCharge {
 
@@ -19,37 +19,37 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
      * Constructs a new PowerUserMobileSubscription according to the
      * given parameters.
      *
-     * @param subscriber the name of the subscriber; must not be null
+     * @param subscriber  the name of the subscriber; must not be null
      * @param phoneNumber the phone number used for this subscription;
-     *  must not be null
+     *                    must not be null
      */
     public PowerUserMobileSubscription(String subscriber, String phoneNumber) {
-        super(subscriber,"Mobile power user "+phoneNumber,phoneNumber,4000);
+        super(subscriber, "Mobile power user " + phoneNumber, phoneNumber, 4000);
         setChargePerText(8);
         setCharge(10);
     }
 
-     // TO DO
+    // TO DO
 
-    public int getMaxChargeInPence(){
-        return getStandingChargeInPence()+ getChargePerText() * costAirBagText + getCharge() * costAirBagMinutes;
+    public int getMaxChargeInPence() {
+        return getStandingChargeInPence() + getChargePerText() * costAirBagText + getCharge() * costAirBagMinutes;
     }
 
 
     @Override
-    public int computeTotalChargeInPence(){
+    public int computeTotalChargeInPence() {
         return getStandingChargeInPence() + calculateMinutesAirbag() * getCharge() + calculateTextAirbag() * getChargePerText();
     }
 
-    public int calculateMinutesAirbag(){
+    public int calculateMinutesAirbag() {
         int minutes = getCallMinutes();
-        if (minutes <= costAirBagMinutes){
+        if (minutes <= costAirBagMinutes) {
             return minutes;
         }
         return costAirBagMinutes;
     }
 
-    public int calculateTextAirbag(){
+    public int calculateTextAirbag() {
         int text = getTextMessages();
         if (text <= costAirBagText) {
             return text;
