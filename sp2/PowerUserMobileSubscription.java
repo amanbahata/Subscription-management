@@ -47,8 +47,8 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
     }
 
     /**
-     *
-     * @return
+     * Compares the total calls duration with the monthly allowance of the billing period
+     * @return the lesser between the total call minutes and the minutes allowance
      */
     public int calculateMinutesAirbag() {
         int minutes = getCallMinutes();
@@ -58,6 +58,10 @@ public class PowerUserMobileSubscription extends MobileSubscription implements B
         return costAirBagMinutes;
     }
 
+    /**
+     * Compares the total texts sent and text allowance for the billing period
+     * @return the lesser between the total text sent and the text allowance
+     */
     public int calculateTextAirbag() {
         int text = getTextMessages();
         if (text <= costAirBagText) {
